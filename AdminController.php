@@ -13,6 +13,14 @@ class AdminController extends Controller
     }
     public function upload_food(Request $request)
 {
+    // Validate first
+    $request->validate([
+        'title' => 'required|string|max:255',
+        'details' => 'required|string',
+        'price' => 'required|numeric',
+        'img' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+    ]);
+
     $data = new Food();
     $data->title = $request->title;
     $data->detail = $request->details;
@@ -23,14 +31,13 @@ class AdminController extends Controller
         $filename = time().'.'.$image->getClientOriginalExtension();
         $image->move(public_path('food_img'), $filename);
         $data->image = $filename;
-    } else {
-        return redirect()->back()->with('error', 'Image upload failed.');
     }
 
     $data->save();
 
     return redirect()->back()->with('success', 'Food added successfully!');
 }
+
 
     public function view_food(){
         $data =Food::all();
@@ -52,15 +59,12 @@ class AdminController extends Controller
         $data->detail=$request->details;
         $data->price=$request->price;
         $image =$request->image;
-        if($image){
-
-
-
-
-            $imagename=time().'.'.$image->getClientOriginalExtension();
-            $request->image->move('food_img',$imagename);
-            $data->image=$imagename;
-        }
+        if ($request->hasFile('image')) {
+        $image = $request->file('image');
+        $imagename = time().'.'.$image->getClientOriginalExtension();
+        $image->move(public_path('food_img'), $imagename);
+        $data->image = $imagename;
+    }
         $data->save();
         return redirect('view_food');
     }
