@@ -1,40 +1,30 @@
-🍽️ Laravel Restaurant Management System
+Laravel Restaurant Management System
 
-A modern restaurant management web application built with Laravel, Blade, Jetstream, and Sanctum. This project provides a full-featured system for managing food items, table reservations, online orders, and delivery status. Designed for both customers and administrators, it streamlines restaurant operations from ordering to delivery.
+A full-stack restaurant management application built with Laravel, designed to handle menu management, table reservations, order processing, and delivery tracking within a unified platform.
 
-✨ Features
-👨‍🍳 Customer Side
+Overview
 
-🔐 User authentication with Laravel Jetstream & Sanctum
+This project provides a structured solution for managing restaurant operations from both customer and administrative perspectives. It demonstrates real-world implementation of authentication, CRUD operations, and order lifecycle management using modern Laravel tools and practices.
 
-📅 Reserve tables online
+Demo
 
-🍕 Browse menu & order food
+https://drive.google.com/file/d/1akNXOjOAZrSOQwOivzh0SvlKzFQ7gOrk/view
 
-🛒 Add food items to cart
-
-💳 Place orders securely
-
-🛠️ Admin Side
-
-➕ Add, ✏️ edit, ❌ delete food items
-
-📊 Dashboard with insights:
-
-Number of orders
-
-Table reservations
-
-Delivery status statistics
-
-🚚 Manage delivery statuses:
-
+Features
+Customer Functionality
+Secure authentication using Laravel Jetstream and Sanctum
+Online table reservation system
+Browse menu and place orders
+Add items to cart
+Streamlined checkout experience
+Administrative Functionality
+Full CRUD operations for menu items
+Central dashboard with operational insights
+Order and reservation management
+Delivery status tracking:
 Pending
-
 On the way
-
 Delivered
-
 Cancelled
 
 ## 📽️ View Demo
@@ -54,66 +44,81 @@ Cancelled
 ![Add Food](https://github.com/user-attachments/assets/16be1ab2-ac84-4c99-82c7-57af03cec18f)
 
 ### 🍕 View Food
-![View Food](https://github.com/itsareebaah/laravel_hotelmanagement/issues/4#issue-3381434292)
+![View Food](https://github.com/itsareebaah/laravel_hotelmanagement/blob/89b77296fd2d6f289717712572029f6e48924fae/veiw_food.png)
 
 ### 🚚 View Orders & Manage Delivery Status
-![Orders & Delivery](https://github.com/itsareebaah/laravel_hotelmanagement/issues/5#issue-3381438436)
+![Orders & Delivery](https://github.com/itsareebaah/laravel_hotelmanagement/blob/89b77296fd2d6f289717712572029f6e48924fae/Orders.png)
 
 ### 🛒 Add to Cart
-![Add to Cart](https://github.com/itsareebaah/laravel_hotelmanagement/issues/6#issue-3381444213)
-
-### 🛍️ Cart View
-![Cart View](https://github.com/itsareebaah/laravel_hotelmanagement/issues/7#issue-3381447078)
+![Add to Cart](https://github.com/itsareebaah/laravel_hotelmanagement/blob/89b77296fd2d6f289717712572029f6e48924fae/cart.png)
 
 
-⚙️Tech Stack
+Tech Stack
 
-Backend: Laravel Framework 12.26.4
+Backend
 
-Frontend: Blade Templates, TailwindCSS
+Laravel (v12.x)
+Eloquent ORM
 
-Authentication: Laravel Jetstream & Sanctum
+Frontend
 
-Database: MySQL
+Blade Templates
+Tailwind CSS
 
-Other: RESTful APIs, Eloquent ORM
+Authentication
 
+Laravel Jetstream
+Laravel Sanctum
 
-Installation & Setup
-1️⃣ Clone the Repository
-git clone https://github.com/itsareebaah/laravel_hotelmanagement.git
-cd laravel_hotelmanagement
-2️⃣ Install Dependencies
+Database
+
+MySQL
+Installation
+Clone Repository
+git clone https://github.com/itsareebaah/laravel-restaurant-management.git
+cd laravel-restaurant-management
+Install Dependencies
 composer install
-npm install && npm run dev
-3️⃣ Configure Environment
+npm install
+npm run dev
+Configure Environment
 cp .env.example .env
 php artisan key:generate
 
-Update .env file with your database credentials.
+Update database credentials in .env.
 
-4️⃣ Run Migrations & Seeders
+Database Setup
 php artisan migrate --seed
-5️⃣ Serve the Application
+Run Application
 php artisan serve
 
-Visit http://127.0.0.1:8000
+Application URL:
+http://127.0.0.1:8000
 
-🔑 Default Admin Credentials
+Default Admin Access
+
 Email: admin@gmail.com
 Password: 12345678
 
-(You can change these in the seeder or database.)
+System Capabilities
+Menu management system
+Order lifecycle handling
+Reservation tracking
+Delivery status monitoring
+Admin dashboard insights
+Limitations
+No payment gateway integration
+No real-time notifications
+Single-role admin system
+Future Improvements
+Payment gateway integration (Stripe / PayPal)
+Role-based access control
+Real-time order updates
+Multi-branch support
+License
 
+MIT License
 
-📊 Project Highlights
+Author
 
-✅ Complete CRUD for menu items
-
-✅ Seamless order & reservation management
-
-✅ Secure authentication system
-
-✅ Real-time delivery status tracking
-
-✅ Responsive UI with Blade & TailwindCSS
+Areeba Ahmad
